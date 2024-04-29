@@ -23,16 +23,16 @@
 	Nota: Si no usamos la extension de Live Server no funcionara correctamente.
 */
 const crearCookie = () => {
-    document.cookie = 'nombre=Carlos';
+	document.cookie = 'nombre=Carlos';
 
-    // Con expiración:
-    // document.cookie = 'nombre=Carlos; expires=1 Jan 2023 01:00:00 UTC';
+	// Con expiración:
+	// document.cookie = 'nombre=Carlos; expires=1 Jan 2023 01:00:00 UTC';
 };
 
 const iniciarSesion = () => {
-    const usuario = prompt('Usuario:');
-    document.cookie = `usuario=${usuario};expires=1 Dec 2022 01:00:00 UTC`;
-    alert('Sesión Iniciada');
+	const usuario = prompt('Usuario:');
+	document.cookie = `usuario=${usuario};expires=1 Dec 2022 01:00:00 UTC`;
+	alert('Sesión Iniciada');
 };
 
 /*
@@ -51,21 +51,21 @@ let usuario;
 const cookies = document.cookie.split(';');
 
 // Recorremos las cookies.
-cookies.forEach(cookie => {
-    // Por cada cookie obtenemos su propiedad.
-    const propiedad = cookie.split('=')[0];
-    // Si la propiedad es usuario.
-    if (propiedad === 'usuario') {
-        // Tomamos el valor y lo guardamos en la variable.
-        usuario = cookie.split('=')[1];
-    }
+cookies.forEach((cookie) => {
+	// Por cada cookie obtenemos su propiedad.
+	const propiedad = cookie.split('=')[0];
+	// Si la propiedad es usuario.
+	if (propiedad === 'usuario') {
+		// Tomamos el valor y lo guardamos en la variable.
+		usuario = cookie.split('=')[1];
+	}
 });
 
 // Comprobamos si hay un usuario;
 if (usuario) {
-    console.log('Hola ' + usuario);
+	console.log('Hola ' + usuario);
 } else {
-    console.log('Por favor inicia sesión');
+	console.log('Por favor inicia sesión');
 }
 
 /*
@@ -80,6 +80,6 @@ if (usuario) {
 	El navegador detectara que la cookie ya expiro y al reiniciar el navegador se borrara.
 */
 const cerrarSesion = () => {
-    document.cookie = 'usuario=; expires=01 Jan 2000 00:00:00 UTC';
-    console.log('Hasta luego!');
+	document.cookie = 'usuario=; expires=01 Jan 2000 00:00:00 UTC';
+	console.log('Hasta luego!');
 };

@@ -19,7 +19,7 @@ console.log(location.protocol);
 
 // assign - Nos permite cargar un nuevo documento
 const cargarDocumento = () => {
-    location.assign('https://google.com');
+	location.assign('https://google.com');
 };
 
 /*
@@ -29,6 +29,6 @@ const cargarDocumento = () => {
 */
 
 const regresar = () => {
-    history.back();
-    // history.forward();
+	history.back();
+	// history.forward();
 };

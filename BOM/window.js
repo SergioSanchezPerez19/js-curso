@@ -47,11 +47,11 @@ console.log(`La ventana de tu navegador mide ${window.innerHeight}px de alto.`);
 */
 let ventana;
 const abrirVentana = () => {
-    ventana = window.open('', '', 'width=500,height=500');
-    ventana.document.write('Hola, escribiendo en la nueva ventana!');
+	ventana = window.open('', '', 'width=500,height=500');
+	ventana.document.write('Hola, escribiendo en la nueva ventana!');
 
-    /* 📌 Podemos abrir pestañas */
-    // window.open('https://google.com');
+	/* 📌 Podemos abrir pestañas */
+	// window.open('https://google.com');
 };
 
 /* 
@@ -59,7 +59,7 @@ const abrirVentana = () => {
 	Nota: Solo podemos cerrar ventanas que hayan sido abriertas por un script.
 */
 const cerrarVentana = () => {
-    ventana.close();
+	ventana.close();
 };
 
 /*

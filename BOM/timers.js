@@ -50,13 +50,13 @@ let cuenta = 0;
 let id;
 
 const iniciar = () => {
-    id = setInterval(() => {
-        cuenta++;
-        console.log(cuenta);
-    }, 1000);
+	id = setInterval(() => {
+		cuenta++;
+		console.log(cuenta);
+	}, 1000);
 };
 
 const parar = () => {
-    console.log('Paramos la cuenta');
-    clearInterval(id);
+	console.log('Paramos la cuenta');
+	clearInterval(id);
 };
